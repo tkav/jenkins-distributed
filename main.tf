@@ -9,7 +9,7 @@ module "jenkins_master" {
   source = "./modules/jenkins/master"
 
   key_name         = var.key_name
-  instance_size    = "t3.micro"
+  instance_size    = "t3.medium"
   project_name     = var.project_name
   security_groups  = [module.jenkins_security_group.security_group_id]
 }

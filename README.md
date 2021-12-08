@@ -26,7 +26,12 @@ ssh ubuntu@JENKINS_MASTER_ADDRESS
 ```
 `jenkins_master_address` will be outputted by terraform.
 
-Retrieve administrator password
+Retrieve administrator password:
+```bash
+sudo cat /root/.jenkins/secrets/initialAdminPassword
+```
+
+If using `user_data_for_docker.sh` use:
 ```bash
 cat /opt/jenkins_home/secrets/initialAdminPassword
 ```

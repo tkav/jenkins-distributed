@@ -1,8 +1,3 @@
-variable "backend_bucket" {
-  type        = string
-  description = "Backend S3 Bucket"
-}
-
 variable "region" {
   type        = string
   description = "The region to deploy in"
