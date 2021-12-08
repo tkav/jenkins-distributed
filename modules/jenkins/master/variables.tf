@@ -12,3 +12,8 @@ variable "instance_size" {
   type        = string
   description = "Size of instance. eg. 't3.micro'."
 }
+
+variable "key_name" {
+  type        = string
+  description = "SSH key for instances."
+}

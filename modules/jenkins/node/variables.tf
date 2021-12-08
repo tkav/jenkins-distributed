@@ -17,3 +17,8 @@ variable "node_count" {
   type        = number
   description = "Number of Jenkins Nodes."
 }
+
+variable "key_name" {
+  type        = string
+  description = "SSH key for instances."
+}
