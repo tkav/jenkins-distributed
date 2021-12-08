@@ -12,7 +12,7 @@ resource "aws_security_group" "jenkins_sg" {
   }
 
   ingress {
-    description      = "Port 80 from my IP"
+    description      = "Port 50000 from my IP"
     from_port        = 50000
     to_port          = 50000
     protocol         = "tcp"

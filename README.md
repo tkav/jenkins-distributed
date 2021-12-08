@@ -22,7 +22,7 @@ terraform apply
 
 SSH into master
 ```
-ssh -l ubuntu -i ~/.ssh/key-name.pem JENKINS_MASTER_ADDRESS
+ssh ubuntu@JENKINS_MASTER_ADDRESS
 ```
 `jenkins_master_address` will be outputted by terraform.
 
