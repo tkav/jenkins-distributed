@@ -72,3 +72,42 @@ Repeat for the other nodes except use `Copy from Existing Node` and enter the na
 - Change the private ip of the node and click save
 
 ![Setup node](docs/images/setup-node.png)
+
+## Create a job
+
+- Click create a job from the homepage
+- Enter a name
+- Select freestyle project and click OK
+- Tick Build periodically
+- Enter a cron statement for the Schedule `*/1 * * * *`
+- Click Add build step, Execute Shell
+- Enter `echo "hello world"` for the command
+- Click Save
+
+The new job will run every 1 minute on one of the nodes.
+
+## Log Retention
+
+- Open the job from the homepage
+- The build history is shown on the left sidebar
+- Click a build number and open Console Output.
+- You can see the hello world build executed on the node.
+- Go back to the Project and click Configure
+- Tick Discard old builds and set the Max # of builds to keep to `5`.
+- Click Save
+
+Only 5 of the last builds for this project will be kept.
+
+## Build labels
+
+- Open node configurations and configure Node 1
+- Enter the `node-1` for Labels
+- Set usage to Only build jobs with label expressions matching this node
+- Click Save
+
+- Configure the test job from the previous step
+- Tick `Restrict where this project can be run`
+- Enter `node-1` for the Label Expression
+- Click Save
+
+The next build will run on `node-1`.
