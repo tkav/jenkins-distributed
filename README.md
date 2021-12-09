@@ -111,3 +111,17 @@ Only 5 of the last builds for this project will be kept.
 - Click Save
 
 The next build will run on `node-1`.
+
+## Extend execution time
+
+- Reconfigue the test job
+- Change the shell command to the following:
+```bash
+echo "hello world"
+sleep 15
+echo "goodbye"
+```
+- Click Save
+
+The next build will pause and run for longer.
+You should see the job in the Build Executor Status sidebar on the homepage when it executes.
