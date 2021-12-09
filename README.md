@@ -61,8 +61,14 @@ Setup the first admin user, click Next and Save and Finish.
 - Remote root directory to `/home/jenkins/jenkins_slave`
 - Launch method: Launch agents via SSH
 - Enter private ip of node-0 as Host
-- Add Credentials `jenkins` username and `jenkins` for password
+- Add Credentials `SSH Username with private key`
+- Enter `jenkins` for the username
+- Enter the private key directly pasting in the private SSH key used to provision the instances
 - Select Non verifying Vericiation Strategy
 - Click Save
+
+Repeat for the other nodes except use `Copy from Existing Node` and enter the name of the first node.
+- Click ok
+- Change the private ip of the node and click save
 
 ![Setup node](docs/images/setup-node.png)
